@@ -110,21 +110,31 @@
                 left: 186px;
                 width: 744px;
                 height: 41px;
+
                 li {
                     display: inline-block;
                     *display: inline;
-                    *zoom: 1;
                     position: relative;
                     zoom: 1;
                     padding-left: 49px;
+                    cursor: pointer;
+
                     a {
                         line-height: 40px;
                         font-size: 16px;
                         color: #292929;
                         font-weight: 700;
                     }
+                    .line {
+                        position: absolute;
+                        color: #a6a7a6;
+                        right: -28px;
+                        font-weight: 100;
+                        font-size: 14px;
+                        top: 10px;
+                    }
                     .scene-box {
-                        /* display: none; */
+                         display: none;
                         position: absolute;
                         top: 40px;
                         background: #fff;
@@ -196,7 +206,7 @@
                         left: 25px;
                         z-index: 10;
                         background-color: #fff;
-                        /* display: none; */
+                         display: none;
                         .diytop {
                             height: 45px;
                             border-bottom: 1px dashed #e7e7e7;
@@ -348,8 +358,8 @@
                         <a href="/actorDesign.html" rel="nofollow" target="_blank">
                             <span class="tag new" style="left:75px;"></span>优享设计</a>
                     </li>
-                    <li class="sceneli">
-                        <a href="javascript:;" target="_blank" rel="nofollow">场景服务<i class="more"></i>
+                    <li class="sceneli" @mouseenter="enterStyle('scene-box')" @mouseleave='leaveStyle("scene-box")'>
+                        <a  href="javascript:;" target="_blank" rel="nofollow">场景服务<i class="more"></i>
                         </a>
                         <div class="scene-box">
                             <ul>
@@ -387,12 +397,13 @@
                         </div>
                     </li>
                     <li>
-                        <a href="/activity/qingsheji.html" class=" a1" target="_blank"><span class="tag new"
-                                                                                             style="left:75px;"></span>创意文具</a>
+                        <a href="/activity/qingsheji.html" class=" a1" target="_blank">
+                            <span class="tag new"  style="left:75px;"></span>创意文具
+                        </a>
                         <span class="line">|</span>
                     </li>
-                    <li class="diyli">
-                        <a href="http://www.tubangzhu.com/" class=" a1" target="_blank" rel="nofollow">图帮主</a>
+                    <li class="diyli" @mouseenter="enterStyle('diysort')" @mouseleave='leaveStyle("diysort")'>
+                        <a  href="http://www.tubangzhu.com/" class=" a1" target="_blank" rel="nofollow">图帮主</a>
                         <div class="diysort">
                             <div class="diytop">你的设计你做主！</div>
                             <div class="info">
@@ -510,6 +521,16 @@
                     clickable: true
                 },
             })
+        },
+        methods:{
+            enterStyle(className){
+                console.log(className)
+                $('.'+className).css({'display':'block'})
+            },
+            leaveStyle(className){
+                $('.'+className).css({'display':'none'})
+            }
+
         }
     }
 </script>
