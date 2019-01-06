@@ -1,8 +1,8 @@
 <style lang="scss" scoped>
     .swiper-container {
-        width: 794px;
-        height: 580px;
-        margin: 20px auto;
+        width: 820px;
+        height: 529px;
+        margin: 0px auto;
     }
 
     .header {
@@ -98,13 +98,20 @@
     }
 
     .ind-main1 {
-        height: 623px;
+        height: 569px;
         position: relative;
+        .content{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
         .main-content {
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
+
             .top-nav {
                 position: absolute;
                 left: 186px;
@@ -278,10 +285,158 @@
                 }
             }
         }
-        .swiper-container {
-            padding-top: 41px;
+        .slidBox{
+          padding-top: 40px;
         }
     }
+    .ind-main2 {
+      margin-top: 35px;
+       .recBox1 {
+        width: 186px;
+        height: 305px;
+        float: left;
+        display: inline;
+      }
+       .recBox2 {
+        width: 250px;
+        height: 305px;
+        float: left;
+        display: inline;
+        margin-left: 1px;
+        position: relative;
+        background: #fff;
+        overflow: hidden;
+         .info {
+           position: absolute;
+           left: 0;
+           top: 30px;
+           width: 100%;
+           text-align: center;
+           .a1 {
+             color: #484848;
+             font-size: 20px;
+           }
+           .a2 {
+             color: #b0b0b0;
+             font-size: 14px;
+             line-height: 2;
+           }
+         }
+      }
+    }
+  .container{
+    .tc1:before {
+      content: '';
+      position: absolute;
+      width: 270px;
+      height: 1px;
+      z-index: 1;
+      background: #5f5f5f;
+      left: 50%;
+      margin-left: -135px;
+      top: 50px;
+    }
+     .tc1 {
+      padding-top: 27px;
+      text-align: center;
+      position: relative;
+       span {
+         color: #4e4e4e;
+         font-size: 28px;
+         line-height: 1.5;
+         z-index: 2;
+         background: #f4f4f4;
+         padding: 0 15px;
+         position: relative;
+       }
+       .ddy-fzjh {
+         font-family: "webFzjh";
+         color: inherit;
+       }
+    }
+    .tc2 {
+      font-size: 16px;
+      color: #a9a9a9;
+      text-align: center;
+      line-height: 1.8;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .apply-box {
+      .section {
+        .title:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 16px;
+          width: 4px;
+          height: 21px;
+          background: #ea3524;
+        }
+        .title {
+          line-height: 52px;
+          overflow: hidden;
+          position: relative;
+          padding-left: 12px;
+          .t1 {
+            color: #515151;
+            font-size: 22px;
+          }
+
+        }
+        .wrap{
+          .left{
+            width: 304px;
+            /* height: 549px; */
+            float: left;
+            position: relative;
+
+          }
+          .right{
+            width: 886px;
+            /* height: 549px; */
+            float: right;
+            li {
+              position: relative;
+              width: 208px;
+              height: 268px;
+              background: #fff;
+              float: left;
+              margin-left: 13px;
+              margin-bottom: 13px;
+              overflow: hidden;
+               .t1 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 22px 0 0 20px;
+                font-size: 20px;
+                color: #484848;
+                z-index: 2;
+              }
+              .t2 {
+                position: absolute;
+                left: 0;
+                top: 52px;
+                padding-left: 20px;
+                width: 100%;
+                color: #b0b0b0;
+                font-size: 14px;
+                z-index: 2;
+              }
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                transition: .3s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
 <template>
     <div class="home">
@@ -347,135 +502,247 @@
                 </div>
             </div>
         </div>
-        <div class="ind-main1 g-wrap">
+        <div class="ind-main1">
             <div class="main-content">
+              <div class="g-wrap">
                 <listMenu></listMenu>
                 <ul class="top-nav">
-                    <li>
-                        <a href="/classify.html" target="_blank">全部印品</a>
-                    </li>
-                    <li>
-                        <a href="/actorDesign.html" rel="nofollow" target="_blank">
-                            <span class="tag new" style="left:75px;"></span>优享设计</a>
-                    </li>
-                    <li class="sceneli" @mouseenter="enterStyle('scene-box')" @mouseleave='leaveStyle("scene-box")'>
-                        <a  href="javascript:;" target="_blank" rel="nofollow">场景服务<i class="more"></i>
-                        </a>
-                        <div class="scene-box">
-                            <ul>
-                                <li>
-                                    <i class="tag tag1"></i>
-                                    <p class="t1">展会物料</p>
-                                    <p>一站式解决，拎包参展</p>
-                                    <a target="_blank" href="/activity/exhibition.html"></a>
-                                </li>
-                                <li>
-                                    <i class="tag tag2"></i>
-                                    <p class="t1">日常办公</p>
-                                    <p>您身边的办公物料服务管家</p>
-                                    <a target="_blank" href="/activity/business.html"></a>
-                                </li>
-                                <li>
-                                    <i class="tag tag3"></i>
-                                    <p class="t1">地推必备</p>
-                                    <p>让地推效果更棒</p>
-                                    <a target="_blank" href="/activity/spread.html"></a>
-                                </li>
-                                <li>
-                                    <i class="tag tag4"></i>
-                                    <p class="t1">门店宣传</p>
-                                    <p>让客户过目不忘</p>
-                                    <a target="_blank" href="/activity/store.html"></a>
-                                </li>
-                                <li class="last">
-                                    <i class="tag tag5"></i>
-                                    <p class="t1">餐饮印品</p>
-                                    <p>塑造餐饮品牌 诱惑吃货味蕾</p>
-                                    <a target="_blank" href="/activity/foodBeverage.html"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/activity/qingsheji.html" class=" a1" target="_blank">
-                            <span class="tag new"  style="left:75px;"></span>创意文具
-                        </a>
-                        <span class="line">|</span>
-                    </li>
-                    <li class="diyli" @mouseenter="enterStyle('diysort')" @mouseleave='leaveStyle("diysort")'>
-                        <a  href="http://www.tubangzhu.com/" class=" a1" target="_blank" rel="nofollow">图帮主</a>
-                        <div class="diysort">
-                            <div class="diytop">你的设计你做主！</div>
-                            <div class="info">
-                                <dl class="dl1 dtest">
-                                    <dt>精美款式</dt>
-                                    <dd>资深设计团队呕血打造，定期更新</dd>
-                                </dl>
-                                <dl class="dl2 dtest">
-                                    <dt>轻松编辑</dt>
-                                    <dd>随意替换文字与LOGO，自定义色彩风格</dd>
-                                </dl>
-                                <dl class="dl3 dtest">
-                                    <dt>300分辨率</dt>
-                                    <dd>按印刷标准生成高清图片</dd>
-                                </dl>
-                            </div>
-                            <div class="listw">
-                                <div class="txt">最受欢迎模板：</div>
-                                <ul class="ul2 f-clearfix">
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-mingpian.html">名片</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-xuanchuandan.html">宣传单</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-guahua.html">企业挂画</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank" href="http://www.tubangzhu.com/template/pr-huace.html">画册</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-zhanjia.html">展架</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-buganjiaotie.html">不干胶贴</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank"
-                                           href="http://www.tubangzhu.com/template/pr-bianqian.html">便签</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank" href="http://www.tubangzhu.com/template/pr-daijinquan.html">代金券</a>
-                                    </li>
-                                    <li class="li2">
-                                        <a target="_blank" href="http://www.tubangzhu.com/template/pr-shoutidai.html">手提袋</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                  <li>
+                    <a href="/classify.html" target="_blank">全部印品</a>
+                  </li>
+                  <li>
+                    <a href="/actorDesign.html" rel="nofollow" target="_blank">
+                      <span class="tag new" style="left:75px;"></span>优享设计</a>
+                  </li>
+                  <li class="sceneli" @mouseenter="enterStyle('scene-box')" @mouseleave='leaveStyle("scene-box")'>
+                    <a  href="javascript:;" target="_blank" rel="nofollow">场景服务<i class="more"></i>
+                    </a>
+                    <div class="scene-box">
+                      <ul>
+                        <li>
+                          <i class="tag tag1"></i>
+                          <p class="t1">展会物料</p>
+                          <p>一站式解决，拎包参展</p>
+                          <a target="_blank" href="/activity/exhibition.html"></a>
+                        </li>
+                        <li>
+                          <i class="tag tag2"></i>
+                          <p class="t1">日常办公</p>
+                          <p>您身边的办公物料服务管家</p>
+                          <a target="_blank" href="/activity/business.html"></a>
+                        </li>
+                        <li>
+                          <i class="tag tag3"></i>
+                          <p class="t1">地推必备</p>
+                          <p>让地推效果更棒</p>
+                          <a target="_blank" href="/activity/spread.html"></a>
+                        </li>
+                        <li>
+                          <i class="tag tag4"></i>
+                          <p class="t1">门店宣传</p>
+                          <p>让客户过目不忘</p>
+                          <a target="_blank" href="/activity/store.html"></a>
+                        </li>
+                        <li class="last">
+                          <i class="tag tag5"></i>
+                          <p class="t1">餐饮印品</p>
+                          <p>塑造餐饮品牌 诱惑吃货味蕾</p>
+                          <a target="_blank" href="/activity/foodBeverage.html"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="/activity/qingsheji.html" class=" a1" target="_blank">
+                      <span class="tag new"  style="left:75px;"></span>创意文具
+                    </a>
+                    <span class="line">|</span>
+                  </li>
+                  <li class="diyli" @mouseenter="enterStyle('diysort')" @mouseleave='leaveStyle("diysort")'>
+                    <a  href="http://www.tubangzhu.com/" class=" a1" target="_blank" rel="nofollow">图帮主</a>
+                    <div class="diysort">
+                      <div class="diytop">你的设计你做主！</div>
+                      <div class="info">
+                        <dl class="dl1 dtest">
+                          <dt>精美款式</dt>
+                          <dd>资深设计团队呕血打造，定期更新</dd>
+                        </dl>
+                        <dl class="dl2 dtest">
+                          <dt>轻松编辑</dt>
+                          <dd>随意替换文字与LOGO，自定义色彩风格</dd>
+                        </dl>
+                        <dl class="dl3 dtest">
+                          <dt>300分辨率</dt>
+                          <dd>按印刷标准生成高清图片</dd>
+                        </dl>
+                      </div>
+                      <div class="listw">
+                        <div class="txt">最受欢迎模板：</div>
+                        <ul class="ul2 f-clearfix">
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-mingpian.html">名片</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-xuanchuandan.html">宣传单</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-guahua.html">企业挂画</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank" href="http://www.tubangzhu.com/template/pr-huace.html">画册</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-zhanjia.html">展架</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-buganjiaotie.html">不干胶贴</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank"
+                               href="http://www.tubangzhu.com/template/pr-bianqian.html">便签</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank" href="http://www.tubangzhu.com/template/pr-daijinquan.html">代金券</a>
+                          </li>
+                          <li class="li2">
+                            <a target="_blank" href="http://www.tubangzhu.com/template/pr-shoutidai.html">手提袋</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
+              </div>
             </div>
-
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
+            <div class="slidBox">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
                     <div v-for="item in arrItem" class="swiper-slide">
-                        <img :src="item.imgUrl">
+                      <img :src="item.imgUrl">
                     </div>
 
+                  </div>
+                  <!-- 如果需要分页器 -->
+                  <div class="swiper-pagination"></div>
                 </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination"></div>
-            </div>
+              </div>
 
         </div>
-
+       <div class="ind-main2">
+        <div class="g-wrap">
+          <div class="recBox1"><img src="//image.duoduoyin.com/uploads/aid/20180310/1803100728253c1595a1ec.jpg" alt="新品上新"></div>
+          <div class="recBox2 t1">
+            <a href="https://www.duoduoyin.com/goods/323.html" target="_blank" class="j-baseAd" adid="348" rel="nofollow"><img src="//image.duoduoyin.com/uploads/aid/20181120/1811200336193b9730250d.jpg" alt="梵高经典艺术台历"></a>
+            <div class="info">
+              <p class="a1"><a target="_blank" href="https://www.duoduoyin.com/goods/323.html" class="j-baseAd" adid="348">梵高经典艺术台历</a></p>
+              <p class="a2">梵高主题 提升品味</p>
+            </div>
+          </div>
+          <div class="recBox2 t2">
+            <a href="https://www.duoduoyin.com/goods/324.html" target="_blank" class="j-baseAd" adid="300" rel="nofollow"><img src="//image.duoduoyin.com/uploads/aid/20181120/1811200316203b4c4a15bc.jpg" alt="韩式文艺清新台历"></a>
+            <div class="info">
+              <p class="a1"><a target="_blank" href="https://www.duoduoyin.com/goods/324.html" class="j-baseAd" adid="300">韩式文艺清新台历</a></p>
+              <p class="a2">自然风格，护眼纸张</p>
+            </div>
+          </div>
+          <div class="recBox2 t3">
+            <a href="https://www.duoduoyin.com/goods/2003.html" target="_blank" class="j-baseAd" adid="299" rel="nofollow"><img src="//image.duoduoyin.com/uploads/aid/20181120/1811200619343dfb687c7e.png" alt="易拉扣工作证套装"></a>
+            <div class="info">
+              <p class="a1"><a target="_blank" href="https://www.duoduoyin.com/goods/2003.html" class="j-baseAd" adid="299">易拉扣工作证套装</a></p>
+              <p class="a2">轻轻一拉刷卡更便捷</p>
+            </div>
+          </div>
+          <div class="recBox2 t4">
+            <a href="https://www.duoduoyin.com/goods/2002.html" target="_blank" class="j-baseAd" adid="297" rel="nofollow"><img src="//image.duoduoyin.com/uploads/aid/20181120/1811200619463dfc299834.png" alt="展会证套装"></a>
+            <div class="info">
+              <p class="a1"><a target="_blank" href="https://www.duoduoyin.com/goods/2002.html" class="j-baseAd" adid="297">展会证套装</a></p>
+              <p class="a2">尺寸大气，更加醒目</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="container g-wrap">
+          <div class="tc1">
+            <span class="ddy-fzjh">优享设计</span>
+          </div>
+          <div class="tc2">资深设计师一对一服务</div>
+          <div class="apply-box">
+            <div class="section ind-f1">
+              <div class="title t1">
+                <span class="t1">热销名片</span>
+              </div>
+              <div class="wrap clear-fix">
+                <div class="left j-rcdBox">
+                  <div class="tempWrap" style="overflow:hidden; position:relative; width:304px"><ul style="width: 1216px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -304px;"><li class="clone" style="float: left; width: 304px;">
+                    <a href="http://www.duoduoyin.com/goods/94.html" class="j-baseAd" adid="445"><img src="//image.duoduoyin.com/uploads/aid/20180706/180706075557f58cd691a0.jpg" alt="意大利丝绸"></a>
+                  </li>
+                    <li style="float: left; width: 304px;">
+                      <a href="http://www.duoduoyin.com/goods/94.html" class="j-baseAd" adid="444"><img src="//image.duoduoyin.com/uploads/aid/20180706/180706075544f58c0a2cfd.jpg" alt="意大利丝绸"></a>
+                    </li>
+                    <li style="float: left; width: 304px;">
+                      <a href="http://www.duoduoyin.com/goods/94.html" class="j-baseAd" adid="445"><img src="//image.duoduoyin.com/uploads/aid/20180706/180706075557f58cd691a0.jpg" alt="意大利丝绸"></a>
+                    </li>
+                    <li class="clone" style="float: left; width: 304px;">
+                      <a href="http://www.duoduoyin.com/goods/94.html" class="j-baseAd" adid="444"><img src="//image.duoduoyin.com/uploads/aid/20180706/180706075544f58c0a2cfd.jpg" alt="意大利丝绸"></a>
+                    </li></ul></div>
+                  <a href="javascript:;" class="prev"></a>
+                  <a href="javascript:;" class="next"></a>
+                  <div class="num">
+                    <span class="on"></span>
+                    <span class=""></span>
+                  </div>
+                </div>
+                <ul class="right clear-fix">
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/226.html" class="j-baseAd" adid="388">丽芙纸</a></p>
+                    <p class="t2">超强可塑性，质地高档</p>
+                    <a href="http://www.duoduoyin.com/goods/226.html" target="_blank" class="j-baseAd" adid="388"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208371574b7bc31d2.jpg" alt="丽芙纸"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/45.html" class="j-baseAd" adid="389">比利时黑卡</a></p>
+                    <p class="t2">深沉睿智，卓尔不同</p>
+                    <a href="http://www.duoduoyin.com/goods/45.html" target="_blank" class="j-baseAd" adid="389"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208372074b80da996.jpg" alt="比利时黑卡"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/47.html" class="j-baseAd" adid="390">芬兰纤维</a></p>
+                    <p class="t2">木质纹理，极具北欧风情</p>
+                    <a href="http://www.duoduoyin.com/goods/47.html" target="_blank" class="j-baseAd" adid="390"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208372674b864c7a3.jpg" alt="芬兰纤维"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/46.html" class="j-baseAd" adid="391">德国金石</a></p>
+                    <p class="t2">是和成熟优雅的商务人士</p>
+                    <a href="http://www.duoduoyin.com/goods/46.html" target="_blank" class="j-baseAd" adid="391"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208373374b8d3487a.jpg" alt="德国金石"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/168.html" class="j-baseAd" adid="392">欧纯棉纸</a></p>
+                    <p class="t2">天然纹理，若隐若现</p>
+                    <a href="http://www.duoduoyin.com/goods/168.html" target="_blank" class="j-baseAd" adid="392"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208374274b9617f6c.jpg" alt="欧纯棉纸"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/105.html" class="j-baseAd" adid="393">意大利塞维亚</a></p>
+                    <p class="t2">原产地意大利，挺拔大气</p>
+                    <a href="http://www.duoduoyin.com/goods/105.html" target="_blank" class="j-baseAd" adid="393"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208374774b9b3ab79.jpg" alt="意大利塞维亚"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/92.html" class="j-baseAd" adid="394">美肌纸</a></p>
+                    <p class="t2">经典大气，高贵奢华</p>
+                    <a href="http://www.duoduoyin.com/goods/92.html" target="_blank" class="j-baseAd" adid="394"><img src="//image.duoduoyin.com/uploads/aid/20180824/180824101353f69e189020.jpg" alt="美肌纸"></a>
+                  </li>
+                  <li>
+                    <p class="t1"><a target="_blank" href="http://www.duoduoyin.com/goods/98.html" class="j-baseAd" adid="395">超厚多层裱</a></p>
+                    <p class="t2">有种实力是不言而喻</p>
+                    <a href="http://www.duoduoyin.com/goods/98.html" target="_blank" class="j-baseAd" adid="395"><img src="//image.duoduoyin.com/uploads/aid/20180712/18071208375674ba4ed166.jpg" alt="超厚多层裱"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
 </template>
