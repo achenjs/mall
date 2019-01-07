@@ -117,7 +117,6 @@
                 left: 186px;
                 width: 744px;
                 height: 41px;
-
                 li {
                     display: inline-block;
                     *display: inline;
@@ -125,10 +124,9 @@
                     zoom: 1;
                     padding-left: 49px;
                     cursor: pointer;
-
                     a {
                         line-height: 40px;
-                        font-size: 16px;
+                        font-size: 18px;
                         color: #292929;
                         font-weight: 700;
                     }

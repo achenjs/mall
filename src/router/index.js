@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import home from '@/views/home'
 import homePage from '@/views/homePage'
-
+import productdetail from '@/views/productdetail'
 Vue.use(Router)
 
 export default new Router({
@@ -15,9 +15,9 @@ export default new Router({
             component: home
         },
         {
-            path: '/homePage',
-            name: 'homePage',
-            component: homePage
+            path: '/productdetail',
+            name: 'productdetail',
+            component: productdetail
         }
     ]
 })
